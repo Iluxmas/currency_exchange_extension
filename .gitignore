@@ -1,11 +1,4 @@
 node_modules
 **/dist
-**/export
-**/npm
-results
-.nyc_output
-*.tsbuildinfo
-.idea
 .DS_Store
-*.diff
-yarn-error.log
+key.js

@@ -1,3 +1,5 @@
+import { apikey } from './key.js'
+
 class Api {
   constructor(url, key) {
     this._baseURL = url;
@@ -16,12 +18,10 @@ class Api {
 
     return newProm;
   }
-
-
 }
 
 const apiURL = "https://api.apilayer.com/fixer";
-const apikey = 'IgCnFI8U0cbMQlvU6NqDKjSdcoyPoPuN';
+
 
 const ApiService = new Api(apiURL, apikey);
 
