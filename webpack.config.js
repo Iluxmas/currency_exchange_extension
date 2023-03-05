@@ -27,7 +27,7 @@ module.exports = {
       use: [MiniCssExtractPlugin.loader, "css-loader"],
     }, {
       test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
-      loader: 'url-loader',
+      type: 'asset/resource',
     }],
   },
   plugins: [new HtmlWebpackPlugin({
