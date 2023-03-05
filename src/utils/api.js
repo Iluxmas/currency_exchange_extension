@@ -1,4 +1,4 @@
-import { apikey } from './key.js'
+import apikey from './key.js'
 
 class Api {
   constructor(url, key) {

@@ -2,7 +2,6 @@ import React from 'react';
 import Pair from './pair.jsx';
 
 export default function PairsList({ rates, pairsData, onDelete }) {
-  console.log(rates);
   return (
     <div>
       <h1>Existing pairs</h1>
@@ -14,7 +13,9 @@ export default function PairsList({ rates, pairsData, onDelete }) {
               target={trgt}
               key={src + trgt}
               rate={
-                rates.find((item) => item[src] !== undefined) ? rates.find((item) => item[src] !== undefined)[src] : 0
+                rates && rates.find((item) => item[src] !== undefined)
+                  ? rates.find((item) => item[src] !== undefined)[src]
+                  : 0
               }
               onDelete={onDelete}
             ></Pair>

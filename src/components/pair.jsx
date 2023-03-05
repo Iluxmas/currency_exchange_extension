@@ -1,7 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Pair({ source, target, rate, onDelete }) {
   const [amount, setAmount] = useState(1);
+
+  useEffect(() => {
+    if (rate) {
+      if (rate.rates[target] >= 1) {
+        setAmount(1);
+      } else if (rate.rates[target] >= 0.1) {
+        setAmount(10);
+      } else {
+        setAmount(100);
+      }
+    }
+  }, [rate]);
   const [isSwitched, setIsSwitched] = useState(false);
 
   return (

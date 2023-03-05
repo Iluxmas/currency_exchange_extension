@@ -10,6 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
+    clean: true,
   },
   module: {
     rules: [{
@@ -26,11 +27,7 @@ module.exports = {
       use: [MiniCssExtractPlugin.loader, "css-loader"],
     }, {
       test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
-      use: [
-        {
-          loader: 'file-loader',
-        },
-      ],
+      loader: 'url-loader',
     }],
   },
   plugins: [new HtmlWebpackPlugin({
@@ -39,6 +36,7 @@ module.exports = {
   }), new CopyPlugin({
     patterns: [
       { from: "public" },
+      { from: "src/images", to: 'images' },
     ],
   }), new MiniCssExtractPlugin({
     filename: "[name].[contenthash].css",

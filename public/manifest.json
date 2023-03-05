@@ -8,5 +8,11 @@
   },
   "permissions": [
     "storage"
-  ]
+  ], 
+  "icons": {
+    "16": "images/rates_16.png",
+    "32": "images/rates_32.png",
+    "48": "images/rates_48.png",
+    "128": "images/rates_128.png"
+  }
 }

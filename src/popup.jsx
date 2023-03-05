@@ -15,8 +15,6 @@ function Popup() {
     chrome.storage.local
       .get('codesList')
       .then((result) => {
-        // console.log('codesList:');
-        // console.log(result.codesList);
         if (!result.codesList) {
           ApiService.getResource('/symbols')
             .then((res) => res.json())
@@ -36,8 +34,6 @@ function Popup() {
     chrome.storage.local
       .get('ratios')
       .then((result) => {
-        // console.log('ratios:');
-        // console.log(result.ratios);
         if (result.ratios) {
           setRatios(result.ratios);
         }
@@ -49,8 +45,6 @@ function Popup() {
     chrome.storage.local
       .get('pairs')
       .then((result) => {
-        // console.log('pairs:');
-        // console.log(result.pairs);
         if (result.pairs) {
           setPairs(result.pairs);
         }
