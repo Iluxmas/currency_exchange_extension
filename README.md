@@ -24,3 +24,8 @@ npm run build
 ```
 
 To load unpacked extension to Chrome follow guide [developer.chrome.com/docs/extensions/mv2/getstarted/](https://developer.chrome.com/docs/extensions/mv2/getstarted/)
+
+**Things to improve**:
+
+- [ ] "Update rate" button to get fresh ratios (requests to API are limited to 100 per month)
+- [ ] Add styling
