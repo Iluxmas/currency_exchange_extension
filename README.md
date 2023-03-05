@@ -24,5 +24,3 @@ npm run build
 ```
 
 To load unpacked extension to Chrome follow guide [developer.chrome.com/docs/extensions/mv2/getstarted/](https://developer.chrome.com/docs/extensions/mv2/getstarted/)
-
-[Documentation for development](docs/Development.md)
